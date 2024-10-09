@@ -1,94 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEX ERC-20</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain DEX Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link" data-page="dashboard">Dashboard</a></li>
+            <li><a href="#" class="nav-link" data-page="grant">Grant DEX Access</a></li>
+            <li><a href="#" class="nav-link" data-page="sell">Sell Tokens</a></li>
+            <li><a href="#" class="nav-link" data-page="buy">Buy Tokens</a></li>
+        </ul>
+    </nav>
 
-    <style>
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 20px;
-      }
+    <div class="container">
+        <div id="dashboard" class="page active">
+            <h1>Dashboard</h1>
+            <div class="info-panel">
+                <div class="info-item">
+                    <h3>Token Price</h3>
+                    <p id="tokenPrice">Loading...</p>
+                    <button onclick="getPrice()">Update Price</button>
+                </div>
+                <div class="info-item">
+                    <h3>Tokens Available</h3>
+                    <p id="tokensAvailable">Loading...</p>
+                    <button onclick="getAvailableTokens()">Update Tokens Available</button>
+                </div>
+                <div class="info-item">
+                    <h3>My Token Balance</h3>
+                    <p id="tokensBalance">Loading...</p>
+                    <button onclick="getTokenBalance()">Update My Tokens</button>
+                </div>
+            </div>
+        </div>
 
-      .row {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-      }
+        <div id="grant" class="page">
+            <h1>Grant DEX Access</h1>
+            <div class="action-item">
+                <input type="number" id="tokenGrant" placeholder="Amount to grant">
+                <button onclick="grantAccess()">Grant Access</button>
+            </div>
+        </div>
 
-      .item {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h2>General Information</h2>
-      <div class="row">
-        <div class="item">
-          <h3>Token Price: <span id="tokenPrice"></span></h3>
-          <button onclick="getPrice()">Update Price</button>
+        <div id="sell" class="page">
+            <h1>Sell Tokens</h1>
+            <div class="action-item">
+                <button onclick="sell()">Sell Tokens</button>
+            </div>
         </div>
-        <div class="item">
-          <h3>Tokens Available: <span id="tokensAvailable"></span></h3>
-          <button onclick="getAvailableTokens()">
-            Update Tokens Available
-          </button>
+
+        <div id="buy" class="page">
+            <h1>Buy Tokens</h1>
+            <div class="action-item">
+                <input type="number" id="tokensToBuy" placeholder="Amount to buy">
+                <button onclick="buy()">Buy Tokens</button>
+            </div>
         </div>
-        <div class="item">
-          <h3>My Token Balance: <span id="tokensBalance"></span></h3>
-          <button onclick="getTokenBalance()">Update My Tokens</button>
-        </div>
-      </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="item">
-          <h3>Grant DEX Access</h3>
-          <div>
-            <input
-              type="number"
-              min="0"
-              placeholder="Enter number of tokens"
-              id="tokenGrant"
-            />
-            <button onclick="grantAccess()">Grant</button>
-          </div>
-        </div>
-        <div class="item">
-          <h3>Sell Tokens</h3>
-          <button onclick="sell()">Sell</button>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <h2>User Controls</h2>
-      <div class="item">
-        <h3>Buy Tokens</h3>
-        <div>
-          <input
-            type="number"
-            min="0"
-            placeholder="Enter number of tokens"
-            id="tokensToBuy"
-          />
-          <button onclick="buy()">Buy</button>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
-      type="application/javascript"
-    ></script>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.2.0/ethers.umd.min.js"
+        type="application/javascript"></script>
+    <script src="script.js"></script>
+</body>
 </html>
