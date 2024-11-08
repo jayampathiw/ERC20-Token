@@ -92,7 +92,7 @@ The `DEX.sol` file implements a decentralized exchange contract:
     Copy code
     
     `npx hardhat node
-    npx hardhat run scripts/deploy.js --network localhost` 
+    npx hardhat run --network localhost .\scripts\deploy.js` 
     
 5.  Update the contract addresses in the frontend file (`frontend/index.html`) with the deployed contract addresses.
     
