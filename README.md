@@ -139,8 +139,3 @@ The frontend (`frontend/index.html`) provides a simple user interface with navig
 -   **Sell Tokens**: Enables the DEX owner to sell tokens.
 -   **Buy Tokens**: Users can buy tokens by specifying the amount and sending the required Ether.
 
-## Security Considerations
-
--   **Access Control**: Only the contract owner can withdraw tokens and Ether from the DEX contract.
--   **Approval Required**: The DEX contract requires user approval to transfer tokens from their account.
--   **Price Validation**: Ensures the correct Ether value is sent when purchasing tokens.
