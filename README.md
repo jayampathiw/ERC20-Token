@@ -63,12 +63,13 @@ The `DEX.sol` file implements a decentralized exchange contract:
 
 1.  Clone the repository:
 
-    bash
+        bash
 
-    Copy code
+        Copy code
 
-    `git clone https://github.com/yourusername/erc20-dex-dapp.git
-cd erc20-dex-dapp`
+        `git clone https://github.com/yourusername/erc20-dex-dapp.git
+
+    cd erc20-dex-dapp`
 
 2.  Install dependencies:
 
