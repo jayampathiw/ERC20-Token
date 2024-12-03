@@ -103,13 +103,13 @@ The `DEX.sol` file implements a decentralized exchange contract:
 
 ## Testing
 
-Run the test suite using Hardhat:
+1.  Run the test suite using Hardhat:
 
     ```
     npx hardhat test
     ```
 
-For test coverage information:
+2.  For test coverage information:
 
     ```
     npx hardhat coverage
@@ -123,7 +123,3 @@ The frontend (`frontend/index.html`) provides a simple user interface with navig
 - **Grant DEX Access**: Allows users to grant the DEX contract permission to transfer tokens on their behalf.
 - **Sell Tokens**: Enables the DEX owner to sell tokens.
 - **Buy Tokens**: Users can buy tokens by specifying the amount and sending the required Ether.
-
-```
-
-```
