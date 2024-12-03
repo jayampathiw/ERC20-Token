@@ -63,38 +63,29 @@ The `DEX.sol` file implements a decentralized exchange contract:
 
 1.  Clone the repository:
 
-        bash
-
-        Copy code
-
-        `git clone https://github.com/yourusername/erc20-dex-dapp.git
-
-    cd erc20-dex-dapp`
+    ```
+    git clone https://github.com/yourusername/erc20-dex-dapp.git
+    cd erc20-dex-dapp
+    ```
 
 2.  Install dependencies:
 
-    bash
-
-    Copy code
-
-    `npm install`
+    ```
+    npm install
+    ```
 
 3.  Compile the smart contracts:
 
-    bash
-
-    Copy code
-
-    `npx hardhat compile`
+    ```
+    npx hardhat compile
+    ```
 
 4.  Deploy the smart contracts on a local Ethereum network:
 
-    bash
-
-    Copy code
-
-    `npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost`
+    ```
+    npx hardhat node
+    npx hardhat run scripts/deploy.js --network localhost
+    ```
 
 5.  Update the contract addresses in the frontend file (`frontend/index.html`) with the deployed contract addresses.
 
@@ -102,32 +93,27 @@ npx hardhat run scripts/deploy.js --network localhost`
 
 1.  Start a local Ethereum network (if not already running):
 
-    bash
-
-    Copy code
-
-    `npx hardhat node`
+    ```
+    npx hardhat node
+    ```
 
 2.  Open the `frontend/index.html` file in a web browser with MetaMask installed and connected to your local Ethereum network (usually `http://localhost:8545`).
+
 3.  Interact with the DApp using the provided UI to check prices, buy tokens, sell tokens, and manage access permissions.
 
 ## Testing
 
 Run the test suite using Hardhat:
 
-bash
-
-Copy code
-
-`npx hardhat test`
+    ```
+    npx hardhat test
+    ```
 
 For test coverage information:
 
-bash
-
-Copy code
-
-`npx hardhat coverage`
+    ```
+    npx hardhat coverage
+    ```
 
 ## Frontend
 
@@ -137,3 +123,7 @@ The frontend (`frontend/index.html`) provides a simple user interface with navig
 - **Grant DEX Access**: Allows users to grant the DEX contract permission to transfer tokens on their behalf.
 - **Sell Tokens**: Enables the DEX owner to sell tokens.
 - **Buy Tokens**: Users can buy tokens by specifying the amount and sending the required Ether.
+
+```
+
+```
