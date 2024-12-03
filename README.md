@@ -40,6 +40,7 @@ erc20-dex-app/
 ├── hardhat.config.js
 ├── package.json
 └── README.md
+```
 
 ## Smart Contracts
 
@@ -47,70 +48,67 @@ erc20-dex-app/
 
 The `Token.sol` file defines an ERC20 token contract:
 
--   Creates "Tim Coin" (TIM) with a fixed initial supply assigned to the deployer.
--   Includes standard ERC20 functions such as `approve`, `transfer`, and `balanceOf`.
+- Creates "Tim Coin" (TIM) with a fixed initial supply assigned to the deployer.
+- Includes standard ERC20 functions such as `approve`, `transfer`, and `balanceOf`.
 
 ### DEX.sol
 
 The `DEX.sol` file implements a decentralized exchange contract:
 
--   **Buy Tokens**: Users can buy tokens with Ether at a predefined price.
--   **Sell Tokens**: Allows the contract owner to sell tokens by transferring them from approved accounts.
--   **Withdraw Tokens and Funds**: The owner can withdraw unsold tokens and accumulated Ether from the contract.
+- **Buy Tokens**: Users can buy tokens with Ether at a predefined price.
+- **Sell Tokens**: Allows the contract owner to sell tokens by transferring them from approved accounts.
+- **Withdraw Tokens and Funds**: The owner can withdraw unsold tokens and accumulated Ether from the contract.
 
 ## Setup and Installation
 
 1.  Clone the repository:
-    
+
     bash
-    
+
     Copy code
-    
+
     `git clone https://github.com/yourusername/erc20-dex-dapp.git
-    cd erc20-dex-dapp` 
-    
+cd erc20-dex-dapp`
+
 2.  Install dependencies:
-    
+
     bash
-    
+
     Copy code
-    
-    `npm install` 
-    
+
+    `npm install`
+
 3.  Compile the smart contracts:
-    
+
     bash
-    
+
     Copy code
-    
-    `npx hardhat compile` 
-    
+
+    `npx hardhat compile`
+
 4.  Deploy the smart contracts on a local Ethereum network:
-    
+
     bash
-    
+
     Copy code
-    
+
     `npx hardhat node
-    npx hardhat run scripts/deploy.js --network localhost` 
-    
+npx hardhat run scripts/deploy.js --network localhost`
+
 5.  Update the contract addresses in the frontend file (`frontend/index.html`) with the deployed contract addresses.
-    
 
 ## Running the DApp
 
 1.  Start a local Ethereum network (if not already running):
-    
+
     bash
-    
+
     Copy code
-    
-    `npx hardhat node` 
-    
+
+    `npx hardhat node`
+
 2.  Open the `frontend/index.html` file in a web browser with MetaMask installed and connected to your local Ethereum network (usually `http://localhost:8545`).
-    
 3.  Interact with the DApp using the provided UI to check prices, buy tokens, sell tokens, and manage access permissions.
-    
 
 ## Testing
 
@@ -120,7 +118,7 @@ bash
 
 Copy code
 
-`npx hardhat test` 
+`npx hardhat test`
 
 For test coverage information:
 
@@ -128,14 +126,13 @@ bash
 
 Copy code
 
-`npx hardhat coverage` 
+`npx hardhat coverage`
 
 ## Frontend
 
 The frontend (`frontend/index.html`) provides a simple user interface with navigation for easy interaction with the smart contracts. Key features include:
 
--   **Dashboard**: Displays the current token price, available tokens, and user's token balance.
--   **Grant DEX Access**: Allows users to grant the DEX contract permission to transfer tokens on their behalf.
--   **Sell Tokens**: Enables the DEX owner to sell tokens.
--   **Buy Tokens**: Users can buy tokens by specifying the amount and sending the required Ether.
-
+- **Dashboard**: Displays the current token price, available tokens, and user's token balance.
+- **Grant DEX Access**: Allows users to grant the DEX contract permission to transfer tokens on their behalf.
+- **Sell Tokens**: Enables the DEX owner to sell tokens.
+- **Buy Tokens**: Users can buy tokens by specifying the amount and sending the required Ether.
